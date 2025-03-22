@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<%- include('./partials/header') %>
 <body>
-    <ul>
-        <% users.forEach(user => { %>
+
+    <ul class="bg-yellow-100">
+        <% posts.forEach(post => { %>
           <li>
-            <a href="/users/<%= user.id %>"><%= user.name %></a>
-          </li>
+            <strong class="italic"><%= post.title %> </strong><br><br><p class="font-serif"><%= post.body %>
+          </li></p>
         <% }) %>
       </ul>
 
-</body>
+<%- include('./partials/footer') %></body>
 </html>

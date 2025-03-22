@@ -1,5 +1,5 @@
 const express = require('express');
-const posts = express.Posts()
+const posts = express.Router()
 
 posts.get("/", (req, res) => {
     res.send("User List")
